@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#551018">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Milaan 2026">
+  <title>Milaan 2026</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div><small>Vader-zoonreis</small><h1>Milaan 2026</h1><p>10-12 december</p></div>
+  <button id="installBtn" hidden>Installeer</button>
+</header>
+<main>
+  <section id="planning" class="view active">
+    <div class="hero"><b>Volgende mijlpaal</b><span>AC Milan - Sunderland</span><small>10 december, 21.00 · San Siro</small></div>
+    <div class="daytabs" id="daytabs"></div>
+    <div id="timeline"></div>
+  </section>
+  <section id="mapview" class="view"><div id="map"></div><div class="maphint">Tik op een marker voor details en navigatie.</div></section>
+  <section id="places" class="view"><div class="sectionhead"><h2>Locaties</h2><input id="search" placeholder="Zoek locatie"></div><div id="placelist"></div></section>
+  <section id="info" class="view">
+    <div class="panel"><h2>Praktisch</h2><p><b>Hotel</b><br>Hotel Regency Milano<br>Via G. Arimondi 12</p><p><b>Vlucht terug</b><br>12 december, 16.50 vanaf Linate</p><p><b>OV</b><br>Gebruik per persoon steeds dezelfde betaalkaart of telefoon. Controleer actuele routes in Google Maps of de ATM-app.</p></div>
+    <div class="panel"><h2>Reserveringen</h2><label><input type="checkbox" data-check="lastsupper"> Laatste Avondmaal</label><label><input type="checkbox" data-check="duomo"> Duomo en dakterras</label><label><input type="checkbox" data-check="matchdinner"> Diner voor wedstrijd</label><label><input type="checkbox" data-check="navigli"> Diner Navigli</label></div>
+    <div class="panel"><h2>Offline</h2><p>Het schema en de locaties blijven na het eerste bezoek beschikbaar. De kaarttegels en actuele navigatie hebben internet nodig.</p></div>
+  </section>
+</main>
+<nav>
+  <button data-view="planning" class="active">◷<span>Planning</span></button>
+  <button data-view="mapview">⌖<span>Kaart</span></button>
+  <button data-view="places">◆<span>Locaties</span></button>
+  <button data-view="info">ⓘ<span>Info</span></button>
+</nav>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="app.js"></script>
+</body></html>
