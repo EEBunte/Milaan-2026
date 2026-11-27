@@ -1,14 +1,115 @@
-const places={
- linate:{name:'Linate Airport',address:'Viale Enrico Forlanini, Segrate',lat:45.4495,lng:9.2783,type:'Vlucht',note:'M4 naar San Babila in circa 12 minuten.'},
- hotel:{name:'Hotel Regency Milano',address:'Via G. Arimondi 12, Milano',lat:45.4915,lng:9.1554,type:'Hotel',note:'Tram 14 vanaf Piazza Firenze naar het centrum.'},
- duomo:{name:'Duomo di Milano',address:'Piazza del Duomo, Milano',lat:45.4642,lng:9.1919,type:'Highlight',note:'Kathedraal en dakterrassen. Tijdslot reserveren.'},
- galleria:{name:'Galleria Vittorio Emanuele II',address:'Piazza del Duomo, Milano',lat:45.4659,lng:9.1901,type:'Winkelen',note:'Historische winkelgalerij naast de Duomo.'},
- montenapoleone:{name:'Via Montenapoleone',address:'Via Montenapoleone, Milano',lat:45.4697,lng:9.1956,type:'Luxe mode',note:'Etalages en flagshipstores in het modedistrict.'},
- buenosaires:{name:'Corso Buenos Aires',address:'Corso Buenos Aires, Milano',lat:45.4793,lng:9.2098,type:'Winkelen',note:'Betaalbare ketens, schoenen en sportkleding.'},
- navigli:{name:'Naviglio Grande',address:'Alzaia Naviglio Grande, Milano',lat:45.4523,lng:9.1740,type:'Diner',note:'Sfeervolle kanalen en restaurants.'},
- sansiro:{name:'Stadio San Siro',address:'Piazzale Angelo Moratti, Milano',lat:45.4781,lng:9.1240,type:'Voetbal',note:'AC Milan - Sunderland, 10 december om 21.00.'},
- cenacolo:{name:'Laatste Avondmaal',address:'Piazza di Santa Maria delle Grazie 2, Milano',lat:45.4660,lng:9.1705,type:'Highlight',note:'Minimaal 30 minuten voor het tijdslot aanmelden.'},
- castello:{name:'Castello Sforzesco',address:'Piazza Castello, Milano',lat:45.4705,lng:9.1791,type:'Highlight',note:'Binnenplaatsen en buitenzijde.'}
+const places = {
+
+  linate:{
+    name:'Linate Airport',
+    address:'Viale Enrico Forlanini, Segrate',
+    lat:45.4495,
+    lng:9.2783,
+    type:'Vlucht',
+    website:'https://www.milanolinate-airport.com/en',
+    image:'https://upload.wikimedia.org/wikipedia/commons/6/69/Linate_Airport_terminal.jpg',
+    note:'M4 naar San Babila in circa 12 minuten.'
+  },
+
+  hotel:{
+    name:'Hotel Regency Milano',
+    address:'Via G. Arimondi 12, Milano',
+    lat:45.4915,
+    lng:9.1554,
+    type:'Hotel',
+    website:'https://regencymilano.com',
+    image:'https://images.unsplash.com/photo-1566073771259-6a8506099945',
+    note:'Tram 14 vanaf Piazza Firenze naar het centrum.'
+  },
+
+  duomo:{
+    name:'Duomo di Milano',
+    address:'Piazza del Duomo, Milano',
+    lat:45.4642,
+    lng:9.1919,
+    type:'Highlight',
+    website:'https://www.duomomilano.it',
+    image:'https://upload.wikimedia.org/wikipedia/commons/d/d7/Milan_Cathedral_from_Piazza_del_Duomo.jpg',
+    note:'Kathedraal en dakterrassen. Tijdslot reserveren.'
+  },
+
+  galleria:{
+    name:'Galleria Vittorio Emanuele II',
+    address:'Piazza del Duomo, Milano',
+    lat:45.4659,
+    lng:9.1901,
+    type:'Winkelen',
+    website:'https://www.yesmilano.it/en/see-and-do/venues/galleria-vittorio-emanuele-ii',
+    image:'https://upload.wikimedia.org/wikipedia/commons/0/0c/Galleria_Vittorio_Emanuele_II.jpg',
+    note:'Historische winkelgalerij naast de Duomo.'
+  },
+
+  montenapoleone:{
+    name:'Via Montenapoleone',
+    address:'Via Montenapoleone, Milano',
+    lat:45.4697,
+    lng:9.1956,
+    type:'Luxe mode',
+    website:'https://www.montenapoleone.luxury/en/',
+    image:'https://upload.wikimedia.org/wikipedia/commons/5/5f/Via_Montenapoleone.jpg',
+    note:'Etalages en flagshipstores in het modedistrict.'
+  },
+
+  buenosaires:{
+    name:'Corso Buenos Aires',
+    address:'Corso Buenos Aires, Milano',
+    lat:45.4793,
+    lng:9.2098,
+    type:'Winkelen',
+    website:'https://www.yesmilano.it/en',
+    image:'https://upload.wikimedia.org/wikipedia/commons/3/39/Corso_Buenos_Aires_Milan.jpg',
+    note:'Betaalbare ketens, schoenen en sportkleding.'
+  },
+
+  navigli:{
+    name:'Naviglio Grande',
+    address:'Alzaia Naviglio Grande, Milano',
+    lat:45.4523,
+    lng:9.1740,
+    type:'Diner',
+    website:'https://www.yesmilano.it/en/discover-milan/districts/navigli',
+    image:'https://upload.wikimedia.org/wikipedia/commons/e/e8/Naviglio_Grande_Milan.jpg',
+    note:'Sfeervolle kanalen en restaurants.'
+  },
+
+  sansiro:{
+    name:'Stadio San Siro',
+    address:'Piazzale Angelo Moratti, Milano',
+    lat:45.4781,
+    lng:9.1240,
+    type:'Voetbal',
+    website:'https://www.sansirostadium.com',
+    image:'https://upload.wikimedia.org/wikipedia/commons/9/96/Giuseppe_Meazza_stadium.jpg',
+    note:'AC Milan - Sunderland, 10 december om 21.00.'
+  },
+
+  cenacolo:{
+    name:'Laatste Avondmaal',
+    address:'Piazza di Santa Maria delle Grazie 2, Milano',
+    lat:45.4660,
+    lng:9.1705,
+    type:'Highlight',
+    website:'https://cenacolovinciano.org',
+    image:'https://upload.wikimedia.org/wikipedia/commons/4/4b/Santa_Maria_delle_Grazie.jpg',
+    note:'Minimaal 30 minuten voor het tijdslot aanmelden.'
+  },
+
+  castello:{
+    name:'Castello Sforzesco',
+    address:'Piazza Castello, Milano',
+    lat:45.4705,
+    lng:9.1791,
+    type:'Highlight',
+    website:'https://www.milanocastello.it',
+    image:'https://upload.wikimedia.org/wikipedia/commons/d/d7/Castello_Sforzesco.jpg',
+    note:'Binnenplaatsen en buitenzijde.'
+  }
+
 };
 const days=[
  {label:'Do 10 dec',date:'2026-12-10',items:[
