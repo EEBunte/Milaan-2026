@@ -13,9 +13,27 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-  <div><small>Vader-zoonreis</small><h1>Milaan 2026</h1><p>10-12 december</p></div>
-  <button id="installBtn" hidden>Installeer</button>
+<header class="hero-header">
+
+  <div class="hero-overlay">
+
+    <small>Vader-zoonreis</small>
+
+    <h1>Milaan 2026</h1>
+
+    <p>10-12 december 2026</p>
+
+    <p>
+      AC Milan – Sunderland<br>
+      Duomo • Navigli • Laatste Avondmaal
+    </p>
+
+  </div>
+
+  <button id="installBtn" hidden>
+    Installeer
+  </button>
+
 </header>
 <main>
   <section id="planning" class="view active">
@@ -38,5 +56,6 @@
   <button data-view="info">ⓘ<span>Info</span></button>
 </nav>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="images.js"></script>
 <script src="app.js"></script>
 </body></html>
